@@ -1,4 +1,4 @@
-require('dotenv').config();
+//require('dotenv').config();
 
 //System specific
 var express         = require('express'),
