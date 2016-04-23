@@ -75,9 +75,9 @@ module.exports = function(app) {
   
 
   app.get('/*',  function(req, res) {
-    if(req.session.passport.user){
-      res.redirect('/brands');
-    }
+    // if(req.session.passport.user){
+    //   res.redirect('/brands');
+    // }
     res.render('index', { title: 'Express' });
   });
 
