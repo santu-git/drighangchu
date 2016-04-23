@@ -1,0 +1,122 @@
+<% include ../layouts/header.ejs %>
+    <div class="row">
+      <div class="col s12 m4 l4">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title" style="padding: 10px;">
+              <h4><%= brand.title %></h4>
+            </div>
+          </div>
+          <div class="card-image">
+            <img src="<%= brand.logo.url %>" alt="" class="responsive-image">
+          </div>
+          <div class="card-content">
+            <div class="row">
+              <span class="col s3">
+                <i class="fa fa-facebook fa-2x color-fb" aria-hidden="true"></i>
+              </span>
+              <span class="col s3">
+                <i class="fa fa-share-alt fa-2x color-fb" aria-hidden="true"></i>
+                3
+              </span>
+              <span class="col s3">
+                <i class="fa fa-thumbs-o-up fa-2x color-fb" aria-hidden="true"></i>
+                3
+              </span>
+              <span class="col s3 ">
+                <!-- <i class="fa fa-comments-o fa-2x color-fb" aria-hidden="true"></i> -->
+                <i class="material-icons color-fb" >chat_bubble</i>
+                3
+              </span>
+            </div>
+            <hr>
+            <div class="row">
+              <span class="col s3">
+                <i class="fa fa-twitter fa-2x color-twitter" aria-hidden="true"></i>
+              </span>
+              <span class="col s3">
+                <i class="fa fa-share-alt fa-2x color-twitter" aria-hidden="true"></i>
+                3
+              </span>
+              <span class="col s3">
+                <i class="fa fa-heart fa-2x color-twitter" aria-hidden="true"></i>
+                3
+              </span>
+              <span class="col s3 ">
+                <i class="fa fa-reply fa-2x color-twitter" aria-hidden="true"></i>
+                3
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m8 l8">
+        <div class="card">
+          <div class="card-content">
+            <form action="/brands/<%= brand._id %>/publish" method="POST" enctype="multipart/form-data">
+              <div class="input-field">
+                <textarea id="message" class="materialize-textarea" name="message"></textarea>
+                <label for="message">Message</label>
+              </div>
+              <div class="file-field input-field">
+                <div class="btn">
+                  <span>File</span>
+                  <input id="promotion-image" type="file" name="promotion-image">
+                </div>
+                <div class="file-path-wrapper">
+                  <input class="file-path validate" type="text">
+                </div>
+              </div>
+              <button type="submit" class="waves-effect waves-light btn">Post</button>
+            </form>
+          </div>
+        </div>
+
+        <% for(var i = 0; i < brand.promotions.length; i++) { %>
+          <div class="card">
+            <div class="card-content">
+              <div class="col s4">
+                <div class="card-image">
+                  <img src="<%= brand.promotions[i].image.url %>" alt="" class="responsive-image">
+                </div>
+              </div>
+              <div class="col s8">
+                <div class="row"><%= brand.promotions[i].message %></div>
+                <hr>
+                <div class="row">
+                  <span class="col s4">
+                    <i class="fa fa-share-alt fa-2x color-fb" aria-hidden="true"></i>
+                  </span>
+                  <span class="col s4">
+                    <i class="fa fa-thumbs-o-up fa-2x color-fb" aria-hidden="true"></i>
+                    3
+                  </span>
+                  <span class="col s4 ">
+                    <!-- <i class="fa fa-comments-o fa-2x color-fb" aria-hidden="true"></i> -->
+                    <i class="material-icons color-fb" >chat_bubble</i>
+                    3
+                  </span>
+                </div>
+                <hr>
+                <div class="row">
+                  <span class="col s4">
+                    <i class="fa fa-share-alt fa-2x color-twitter" aria-hidden="true"></i>
+                  </span>
+                  <span class="col s4">
+                    <i class="fa fa-heart fa-2x color-twitter" aria-hidden="true"></i>
+                    3
+                  </span>
+                  <span class="col s4 ">
+                    <i class="fa fa-reply fa-2x color-twitter" aria-hidden="true"></i>
+                    3
+                  </span>
+                  </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        <% } %>
+      </div>
+    </div>
+    
+<% include ../layouts/footer.ejs %>

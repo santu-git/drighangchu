@@ -1,0 +1,29 @@
+<% include ../layouts/header.ejs %>
+  <div class="container">
+  <div class="row">
+
+    <div class="col s12 m6 offset-m3">
+      <ul class="collection with-header">
+        <li class="collection-header">
+          <h5>User Info</h5>
+        </li>
+        <li class="collection-item">
+          <div class="row">
+            <div class="col s6 grey-text darken-1">Email</div>
+            <div class="col s6 grey-text text-darken-4"><%= user.email %></div>
+          </div>
+        </li>    
+        <li class="collection-item">
+          <div class="row">
+            <div class="col s6 grey-text darken-1">User Name</div>
+            <div class="col s6 grey-text text-darken-4"><%= user.username %></div>
+          </div>
+        </li>         
+      </ul>
+    </div>
+      
+    
+  </div>
+  
+<% include ..//layouts/footer.ejs %>
+  

@@ -1,0 +1,12 @@
+{
+  "name": "angular-passport",
+  "version": "0.0.0",
+  "dependencies": {
+    "json3": "~3.3.2",
+    "jquery": "2.1.1",
+    "bootstrap": "~3.3.6",
+    "materialize": "~0.97.6",
+    "font-awesome": "~4.5.0",
+    "material-design-icons": "~2.2.3"
+  }
+}

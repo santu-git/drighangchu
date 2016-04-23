@@ -1,0 +1,12 @@
+node_modules
+.tmp
+.sass-cache
+public/bower_components
+public/uploads/images/*.*
+public/uploads/brands/*.*
+public/uploads/promotions/*.*
+.env
+heroku
+.idea
+.DS_Store
+bin/www

@@ -1,0 +1,80 @@
+<% include ../layouts/header.ejs %>
+    <div class="row">
+      <!-- <div class="col m4 l4">
+        <ul class="collection with-header">
+          <li class="collection-header teal lighten-2"><h4>Brands</h4></li> -->
+          <% for(var i = 0; i < brands.length; i++) { %>
+            <div class="col s12 m3 l3">
+              <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <a href="/brands/<%= brands[i]._id %>" class="pull-right">
+                    <img class="activator" src="<%= brands[i].logo.url %>">
+                  </a>
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">
+                    <%= brands[i].title %>
+                    <!-- <i class="material-icons right">more_vert</i> -->
+                  </span>
+                </div>
+
+                <div class="card-action">
+                  
+                    <% if(brands[i].facebook.id){ %>
+                      <a href="#" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Disconnect from facebook">
+                        <i class="fa fa-facebook-square fa-3x color-fb" aria-hidden="true"></i>
+                    <% } else { %>
+                      <a href="/brands/<%= brands[i]._id %>/facebook" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Connect with facebook">
+                        <i class="fa fa-facebook-square fa-3x" aria-hidden="true" style="color:gray"></i>
+                    <% } %>
+                  </a>
+                  
+                    <% if(brands[i].twitter.id){ %>
+                      <a href="#" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Disconnect from twitter">
+                        <i class="fa fa-twitter-square fa-3x color-twitter" aria-hidden="true" ></i>
+                    <% } else { %>
+                      <a href="/brands/<%= brands[i]._id %>/twitter" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Connect with twitter">
+                        <i class="fa fa-twitter-square fa-3x" aria-hidden="true" style="color:gray"></i>
+                    <% } %>
+                  </a>
+                  <!-- <a href="/brands/<%= brands[i]._id %>" class="pull-right">
+                    <i class="small material-icons">send</i>
+                  </a> -->
+                </div>
+
+                <!-- <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">
+                    Card Title
+                    <i class="material-icons right">close</i>
+                  </span>
+                  <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                </div> -->
+              </div>
+            </div>
+          <% } %>
+          <div class="col s12 m3 l3">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <a href="/brands/new" >
+                  <img class="activator" src="/uploads/images/icon-plus-sign.png" class="responsive-image">
+                </a>
+              </div>
+              <!-- <div class="card-content">
+                <span class="card-title activator grey-text ">
+                  New Brand
+                </span>
+              </div> -->
+
+              <div class="card-action">
+                <i class="fa fa-facebook-square fa-3x" aria-hidden="true" style="color:gray"></i>
+                <i class="fa fa-twitter-square fa-3x" aria-hidden="true" style="color:gray"></i>
+              </div>
+            </div>
+          </div>
+        <!-- </ul>
+      </div> -->
+    </div>
+<% include ../layouts/footer.ejs %>
+
+
+  
