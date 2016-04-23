@@ -6,4 +6,3 @@ public/bower_components
 heroku
 .idea
 .DS_Store
-bin/www
