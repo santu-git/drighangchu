@@ -34,8 +34,5 @@
     "multer":"~1.1.0",
     "form-data":"1.0.0-rc4",
     "bower":"~1.7.9"
-  },
-  "scripts": {
-    "postinstall": "./node_modules/bower/bin/bower install"
-    }
+  }
 }
